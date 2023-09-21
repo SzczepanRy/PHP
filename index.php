@@ -9,7 +9,12 @@
     
 </head>
 <body>
-    text
+    text 
+    <!-- <form method="GET" >
+        <input type="text" name="liczba">
+        <br>
+        <button type="submit">submit</button>
+    </form> -->
     <?php
         print("<i>italicaks</i><br>");
         echo("el1"."el2"."<br>");//konkatenacja
@@ -49,6 +54,18 @@
             $v = 11-$i;
             echo("$i , $v <br>");
         };
+
+        $i =0;
+        if(isset($_GET["liczba"])){
+            while($i<$_GET["liczba"]){
+                echo "$i ". (11-$i)."<br>";
+                $i++;
+            }
+    
+    
+        }
+     
+
     ?>
 </body>
 </html>
