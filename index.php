@@ -37,10 +37,18 @@
         echo($r==="10");
 
         $y="10";
-        echo($y+10)
+        echo($y+10);
+        echo("<br>");
+
 
         //if elseif else 
-        
+        for($i=1;$i<=10;$i++){
+            if($i%2===0){
+                echo "$i is div by 2 <br>";
+            };
+            $v = 11-$i;
+            echo("$i , $v <br>");
+        };
     ?>
 </body>
 </html>
