@@ -64,8 +64,38 @@
     
     
         }
-     
 
+
+
+    for($i=1;$i<=10;$i++){
+        $tab[$i]= rand(1,100);
+        echo $tab[$i] ," ";
+    };
+    sort($tab);
+    echo"sorted";
+    for($i=0;$i<=9;$i++){
+        if($tab[$i]>50){
+      //  $tab[$i]= rand(1,100);
+        echo $tab[$i] ," ";
+        }
+    };
+    // $tab[0]="pierwszy";
+     $tabb = array(
+         "perwszy"=>"jedent",
+         "perwszy="=>"jeent",
+         "perwsy"=>"jedet",
+     );
+     echo ($tabb["pirewszy"]);
+
+
+
+     function fun($a){
+         echo "<br>";
+         for($i=0;$i<$a;$i++){
+             echo "*";
+         }
+     }
+     fun(10)
     ?>
 </body>
 </html>
