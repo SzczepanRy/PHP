@@ -96,6 +96,13 @@
          }
      }
      fun(10)
+
+     function pp($a,$b){
+         echo $a*$b
+
+        }
+        $a = $_GET["a"]
+        $b = $_GET["b"]
     ?>
 </body>
 </html>
