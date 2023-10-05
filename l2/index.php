@@ -34,7 +34,42 @@
         echo "<br>męszczyzna";
     }}
 
+    $pesel = $_GET["pesel"]
+    if(strlen($pesel) != 11){
+        echo "bad pesel"
+    }else{
+        switch($pesel[2])
+        {
+            case "0":
+            case "1":
+                $rok="19"; break;
+            case "2":
+            case "3":
+                $rok="20"; break;
 
+            case "4":
+            case "5":
+                $rok="21"; break;
+
+        }
+        echo $rok;
+    }
+    $te = trim($_GET["te"])
+    for($i=0;$i,strlen($te);i++){
+        echo chr(ord($te[$i])+1);
+    }
+
+    $t1 ="KONIECMATURY"
+    $t2 ="OK"
+    for($i=0;$i<strlen($tekst);$i++){
+        $p =  strpos($t1,$test[$i]);
+        if($p === false){
+            echo $tekst[$i]
+        }
+        else{
+            echo $t2[$p]
+        }
+    }
     ?>
 </body>
 </html>
