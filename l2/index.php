@@ -34,9 +34,9 @@
         echo "<br>męszczyzna";
     }}
 
-    $pesel = $_GET["pesel"]
+    $pesel = $_GET["pesel"];
     if(strlen($pesel) != 11){
-        echo "bad pesel"
+        echo "bad pesel";
     }else{
         switch($pesel[2])
         {
@@ -54,21 +54,21 @@
         }
         echo $rok;
     }
-    $te = trim($_GET["te"])
-    for($i=0;$i,strlen($te);i++){
-        echo chr(ord($te[$i])+1);
-    }
-
-    $t1 ="KONIECMATURY"
-    $t2 ="OK"
-    for($i=0;$i<strlen($tekst);$i++){
-        $p =  strpos($t1,$test[$i]);
-        if($p === false){
-            echo $tekst[$i]
-        }
-        else{
-            echo $t2[$p]
-        }
+    $te = trim($_GET["te"]);
+    // for($i=0;$i,strlen($te);i++){
+    //     echo chr(ord($te[$i])+1);
+    // }
+$te = strtoupper($te);
+    $t1 ="KONIECMATURY";
+    $t2 ="OKINCEAMUTYR";
+    for($i=0;$i<strlen($te);$i++){
+        $p =  strpos($t1,$te[$i]);
+        // if($p === false){
+        //     echo $te[$i]
+        // }
+        // else{
+            echo $t2[$p];
+        // }
     }
     ?>
 </body>

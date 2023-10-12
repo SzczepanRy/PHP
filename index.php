@@ -100,9 +100,18 @@
      function pp($a,$b){
          echo $a*$b
 
-        }
-        $a = $_GET["a"]
-        $b = $_GET["b"]
+        };
+        $a = $_GET["a"];
+        $b = $_GET["b"];
+
+        //gdy strlen(tekst) nie stosujemu polskich
+        //strpos(text,ciąg) jesli jest = index  / jesli nie to false
+        
+        
+
+
+
+
     ?>
 </body>
 </html>
