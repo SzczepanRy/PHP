@@ -64,16 +64,19 @@ if(isset($_GET['akcja']))
 }
 
 $result=mysqli_query($conn,"SELECT id,imie,nazwisko FROM tablica") or die("błąd w select");
+$i=1;
 if(mysqli_num_rows($result)>0)
 {
-    echo "<table border=1> <tr> <th> imie </th> <th> nazwisko </th> <th> usuwanie </th> <th> edycja </th> </tr>";
+   
+    echo "<table border=1> <tr> <th> num </th> <th> imie </th> <th> nazwisko </th> <th> usuwanie </th> <th> edycja </th> </tr>";
     while($row=mysqli_fetch_array($result))
     {
-        echo "<form> <tr> <td> <input type='hidden' name='id' value='",$row['id'],"'>",
+        echo "<form> <tr> <td>", $i," </td>   <td> <input type='hidden' name='id' value='",$row['id'],"'>",
         $row['imie'], '</td> <td>', $row["nazwisko"],"</td> 
         <td> <input type='submit' name='akcja' value='usun'> </td> 
         <td> <input type='submit' name='akcja' value='edytuj'> </td>
         </tr> </form>";
+        $i++;
     }
     echo "</table>";
 }
