@@ -1,0 +1,17 @@
+	header(typ) – przesłanie nagłówka określającego typ danych, np.:
+header(„Content-type: image/jpeg”)
+	imagecreate(x,y) – utworzenie rysunku o wskazanej wielkości (w pikselach) i podanie jego identyfikatora
+	imagecolorallocate(id_rys,R,G,B) – definiowanie koloru dla rysunku
+	imagefill(id_rys,x,y,id_koloru) – wypełnienie obszaru ograniczonego podanym kolorem, współrzędne x i y wyznaczają dowolny punkt wewnątrz tego obszaru
+	imageline(id_rys,xp,yp,xk,yk,kolor) – rysuje na wskazanym rysunku linię między podanymi punktami o zadanym kolorze
+	imagejpeg(id_rys) – wyświetla przygotowany rysunek w formacie JPG
+	imagegif(id_rys) – wyświetla rysunek w formacie GIF
+	imagesetpixel(id_rys,x,y,kolor) – ustawia kolor pixela o wskazanych współrzędnych na wybranym rysunku
+	imagearc(id_rys,x,y,szer,wys,kąt_początkowy,kąt_końcowy,kolor) – rysuje łuk
+	imagefilledrectangle(id_rys,x1,y1,x2,y2,kolor) – rysuje prostokąt wypełniony kolorem, x1,y1 – współrzędne lewego górnego narożnika, x2,y2 – współrzędne prawego dolnego narożnika
+	imagestring(id_rys,nr_czcionki,x,y,tekst,kolor) – umieszcza tekst na rysunku
+	imagecreatefromgif(plik) – tworzy rysunek na podstawie pliku
+	imagecolortransparent(id_rys,kolor) – ustala kolor przezroczystości rysunku
+	imagesizex(id_rys) – zwraca szerokość rysunku
+	imagesizey(id_rys) – zwraca wysokość rysunku
+	getimagesize(id_rys) – zwraca czteroelementową tablicę z informacjami o rysunku
