@@ -12,7 +12,7 @@
   {
     $kolorslupka = imagecolorallocate ($rysunek, 25*$i, 25*$i,0);
     imagefilledrectangle ($rysunek, $i*10+3, 150-$liczby[$i]*10, $i*10+7, 150, $kolorslupka);
-    imagefilledpolygon ($rysunek,array( $i*10+3, 150, $i*10+7, 150, $i*10+7, 140-$liczby[$i]*10, $i*10+20, 140-$liczby[$i]*10),4, $kolorslupka);
+    imagefilledpolygon ($rysunek,array( $i*10+3, 150, $i*10+7, 150, $i*10+7, 140-$liczby[$i]*10, $i*10+10, 140-$liczby[$i]*10 ),4, $kolorslupka);
     #imagefilledrectangle ($rysunek, $i*10+3, 150-$liczby[$i]*10, $i*10+7, 150, $kolorslupka);
     imagestring ($rysunek, 1, 3+$i*10, 151, $i, $kolorczarny);
   }
