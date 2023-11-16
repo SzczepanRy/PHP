@@ -1,15 +1,31 @@
 <?php
+
+
+mysqli_report(MYSQLI_REPORT_OFF);
+$conn=mysqli_connect("localhost","root","", "srydz");
+if(!$conn) die("brak poÅ‚Ä…czenia");
+
+
 if(isset($_POST['login'],$_POST['pass']))
 {
-	if($_POST['login']=='admin'&&$_POST['pass']=='admin')
+	      
+	$rs = mysqli_query($conn, "SELECT login,password FROM loginy WHERE id=1") or die("insert nie dziala");
+	$row = mysqli_fetch_array($rs);
+	
+	echo(sha1($_POST['pass']));
+	echo("<br>");
+	echo($row["password"]);
+
+	if($_POST['login']==$row["login"]&&sha1($_POST['pass'])==$row["password"])
 	{
 		session_start();
 		$_SESSION['login']=$_POST['login'];
 		header("Location: glowna.php");
+		mysqli_close($conn);
 		exit();
 	}
 	else
-		$error = "<B>B³êdny login lub has³o!</B><BR>";
+		$error = "<B>Bï¿½ï¿½dny login lub hasï¿½o!</B><BR>";
 }
 else
 	$error = false;
@@ -22,11 +38,11 @@ else
 <?php
   echo $error ? $error : "";
 ?>
-  <B>Podaj login i&nbsp;has³o</B>
+  <B>Podaj login i&nbsp;hasï¿½o</B>
   <FORM method="POST">
     Login: <INPUT type="text" name="login"><BR>
-    Has³o: <INPUT type="password" name="pass"><BR>
-    <INPUT type="submit" value="Zaloguj siê">
+    Hasï¿½o: <INPUT type="password" name="pass"><BR>
+    <INPUT type="submit" value="Zaloguj siï¿½">
   </FORM>
 </BODY>
 </HTML> 
